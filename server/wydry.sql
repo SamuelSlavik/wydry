@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.29, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.30, for Linux (x86_64)
 --
 -- Host: localhost    Database: wydry
 -- ------------------------------------------------------
--- Server version	8.0.29-0ubuntu0.20.04.3
+-- Server version	8.0.30-0ubuntu0.20.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -111,7 +111,7 @@ CREATE TABLE `auth_permission` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `auth_permission_content_type_id_codename_01ab375a_uniq` (`content_type_id`,`codename`),
   CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,7 +120,7 @@ CREATE TABLE `auth_permission` (
 
 LOCK TABLES `auth_permission` WRITE;
 /*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
-INSERT INTO `auth_permission` VALUES (1,'Can add log entry',1,'add_logentry'),(2,'Can change log entry',1,'change_logentry'),(3,'Can delete log entry',1,'delete_logentry'),(4,'Can view log entry',1,'view_logentry'),(5,'Can add permission',2,'add_permission'),(6,'Can change permission',2,'change_permission'),(7,'Can delete permission',2,'delete_permission'),(8,'Can view permission',2,'view_permission'),(9,'Can add group',3,'add_group'),(10,'Can change group',3,'change_group'),(11,'Can delete group',3,'delete_group'),(12,'Can view group',3,'view_group'),(13,'Can add content type',4,'add_contenttype'),(14,'Can change content type',4,'change_contenttype'),(15,'Can delete content type',4,'delete_contenttype'),(16,'Can view content type',4,'view_contenttype'),(17,'Can add session',5,'add_session'),(18,'Can change session',5,'change_session'),(19,'Can delete session',5,'delete_session'),(20,'Can view session',5,'view_session'),(21,'Can add user',6,'add_user'),(22,'Can change user',6,'change_user'),(23,'Can delete user',6,'delete_user'),(24,'Can view user',6,'view_user'),(25,'Can add information',7,'add_information'),(26,'Can change information',7,'change_information'),(27,'Can delete information',7,'delete_information'),(28,'Can view information',7,'view_information'),(29,'Can add articles',8,'add_articles'),(30,'Can change articles',8,'change_articles'),(31,'Can delete articles',8,'delete_articles'),(32,'Can view articles',8,'view_articles');
+INSERT INTO `auth_permission` VALUES (1,'Can add log entry',1,'add_logentry'),(2,'Can change log entry',1,'change_logentry'),(3,'Can delete log entry',1,'delete_logentry'),(4,'Can view log entry',1,'view_logentry'),(5,'Can add permission',2,'add_permission'),(6,'Can change permission',2,'change_permission'),(7,'Can delete permission',2,'delete_permission'),(8,'Can view permission',2,'view_permission'),(9,'Can add group',3,'add_group'),(10,'Can change group',3,'change_group'),(11,'Can delete group',3,'delete_group'),(12,'Can view group',3,'view_group'),(13,'Can add content type',4,'add_contenttype'),(14,'Can change content type',4,'change_contenttype'),(15,'Can delete content type',4,'delete_contenttype'),(16,'Can view content type',4,'view_contenttype'),(17,'Can add session',5,'add_session'),(18,'Can change session',5,'change_session'),(19,'Can delete session',5,'delete_session'),(20,'Can view session',5,'view_session'),(21,'Can add user',6,'add_user'),(22,'Can change user',6,'change_user'),(23,'Can delete user',6,'delete_user'),(24,'Can view user',6,'view_user'),(25,'Can add information',7,'add_information'),(26,'Can change information',7,'change_information'),(27,'Can delete information',7,'delete_information'),(28,'Can view information',7,'view_information'),(29,'Can add articles',8,'add_articles'),(30,'Can change articles',8,'change_articles'),(31,'Can delete articles',8,'delete_articles'),(32,'Can view articles',8,'view_articles'),(33,'Can add images',9,'add_images'),(34,'Can change images',9,'change_images'),(35,'Can delete images',9,'delete_images'),(36,'Can view images',9,'view_images'),(37,'Can add events',10,'add_events'),(38,'Can change events',10,'change_events'),(39,'Can delete events',10,'delete_events'),(40,'Can view events',10,'view_events');
 /*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,7 +146,7 @@ CREATE TABLE `django_admin_log` (
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk` FOREIGN KEY (`user_id`) REFERENCES `userauth_user` (`id`),
   CONSTRAINT `django_admin_log_chk_1` CHECK ((`action_flag` >= 0))
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,7 +155,7 @@ CREATE TABLE `django_admin_log` (
 
 LOCK TABLES `django_admin_log` WRITE;
 /*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
-INSERT INTO `django_admin_log` VALUES (1,'2022-07-27 14:14:02.505460','1','Lorem ipsum dolor sit amet, consectetur adipiscing elit.',1,'[{\"added\": {}}]',7,1),(2,'2022-07-27 14:15:00.369794','2','Phasellus tincidunt vel diam quis maximus.',1,'[{\"added\": {}}]',7,1),(3,'2022-07-27 14:15:28.564764','3','Vestibulum consectetur dapibus est quis mattis.',1,'[{\"added\": {}}]',7,1),(4,'2022-07-30 12:53:09.152676','1','Articles object (1)',1,'[{\"added\": {}}]',8,1),(5,'2022-07-30 12:55:30.202754','2','Articles object (2)',1,'[{\"added\": {}}]',8,1),(6,'2022-07-30 12:56:40.890979','3','Articles object (3)',1,'[{\"added\": {}}]',8,1),(7,'2022-07-30 12:58:17.608614','4','Articles object (4)',1,'[{\"added\": {}}]',8,1),(8,'2022-07-30 13:45:46.176780','4','Maecenas hendrerit iaculis tempor. Nullam sagittis vestibulum condimentum.',2,'[{\"changed\": {\"fields\": [\"Body\"]}}]',8,1);
+INSERT INTO `django_admin_log` VALUES (1,'2022-07-27 14:14:02.505460','1','Lorem ipsum dolor sit amet, consectetur adipiscing elit.',1,'[{\"added\": {}}]',7,1),(2,'2022-07-27 14:15:00.369794','2','Phasellus tincidunt vel diam quis maximus.',1,'[{\"added\": {}}]',7,1),(3,'2022-07-27 14:15:28.564764','3','Vestibulum consectetur dapibus est quis mattis.',1,'[{\"added\": {}}]',7,1),(4,'2022-07-30 12:53:09.152676','1','Articles object (1)',1,'[{\"added\": {}}]',8,1),(5,'2022-07-30 12:55:30.202754','2','Articles object (2)',1,'[{\"added\": {}}]',8,1),(6,'2022-07-30 12:56:40.890979','3','Articles object (3)',1,'[{\"added\": {}}]',8,1),(7,'2022-07-30 12:58:17.608614','4','Articles object (4)',1,'[{\"added\": {}}]',8,1),(8,'2022-07-30 13:45:46.176780','4','Maecenas hendrerit iaculis tempor. Nullam sagittis vestibulum condimentum.',2,'[{\"changed\": {\"fields\": [\"Body\"]}}]',8,1),(9,'2022-07-30 14:20:40.553970','1','/home/adam/PycharmProjects/wydry/media/uploaded_images/placeholder-3.png',1,'[{\"added\": {}}]',9,1),(10,'2022-07-30 14:21:07.915908','2','/home/adam/PycharmProjects/wydry/media/uploaded_images/placeholder-1.jpeg',1,'[{\"added\": {}}]',9,1),(11,'2022-07-30 14:21:45.093125','3','/home/adam/PycharmProjects/wydry/media/uploaded_images/male-placeholder-image.jpeg',1,'[{\"added\": {}}]',9,1),(12,'2022-07-30 14:50:24.646760','1','Lorem ipsum.',1,'[{\"added\": {}}, {\"added\": {\"name\": \"images\", \"object\": \"/home/adam/PycharmProjects/wydry/media/uploaded_images/placeholder-3_hvtNEy8.png\"}}, {\"added\": {\"name\": \"images\", \"object\": \"/home/adam/PycharmProjects/wydry/media/uploaded_images/male-placeholder-image_G6XdqYo.jpeg\"}}]',10,1),(13,'2022-07-30 15:19:50.972878','2','Curabitur non vehicula odio, nec molestie lacus.',1,'[{\"added\": {}}]',10,1),(14,'2022-07-30 15:20:01.165807','2','/home/adam/PycharmProjects/wydry/media/uploaded_images/placeholder-1.jpeg',2,'[{\"changed\": {\"fields\": [\"Event\"]}}]',9,1);
 /*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +172,7 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `django_content_type` (
 
 LOCK TABLES `django_content_type` WRITE;
 /*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
-INSERT INTO `django_content_type` VALUES (1,'admin','logentry'),(8,'articles','articles'),(3,'auth','group'),(2,'auth','permission'),(4,'contenttypes','contenttype'),(7,'information','information'),(5,'sessions','session'),(6,'userauth','user');
+INSERT INTO `django_content_type` VALUES (1,'admin','logentry'),(8,'articles','articles'),(3,'auth','group'),(2,'auth','permission'),(4,'contenttypes','contenttype'),(10,'events','events'),(9,'images','images'),(7,'information','information'),(5,'sessions','session'),(6,'userauth','user');
 /*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,7 +198,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,7 +207,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'sessions','0001_initial','2022-07-27 13:42:02.377186'),(2,'contenttypes','0001_initial','2022-07-27 13:50:35.610564'),(3,'contenttypes','0002_remove_content_type_name','2022-07-27 13:50:37.116373'),(4,'auth','0001_initial','2022-07-27 13:50:43.354974'),(5,'auth','0002_alter_permission_name_max_length','2022-07-27 13:50:44.595820'),(6,'auth','0003_alter_user_email_max_length','2022-07-27 13:50:44.749991'),(7,'auth','0004_alter_user_username_opts','2022-07-27 13:50:44.900544'),(8,'auth','0005_alter_user_last_login_null','2022-07-27 13:50:45.008852'),(9,'auth','0006_require_contenttypes_0002','2022-07-27 13:50:45.103614'),(10,'auth','0007_alter_validators_add_error_messages','2022-07-27 13:50:45.191263'),(11,'auth','0008_alter_user_username_max_length','2022-07-27 13:50:45.326282'),(12,'auth','0009_alter_user_last_name_max_length','2022-07-27 13:50:45.409848'),(13,'auth','0010_alter_group_name_max_length','2022-07-27 13:50:45.608998'),(14,'auth','0011_update_proxy_permissions','2022-07-27 13:50:45.686454'),(15,'auth','0012_alter_user_first_name_max_length','2022-07-27 13:50:45.837113'),(16,'userauth','0001_initial','2022-07-27 13:50:53.028856'),(17,'admin','0001_initial','2022-07-27 13:50:56.248212'),(18,'admin','0002_logentry_remove_auto_add','2022-07-27 13:50:56.389073'),(19,'admin','0003_logentry_add_action_flag_choices','2022-07-27 13:50:56.544910'),(20,'information','0001_initial','2022-07-27 14:07:18.409444'),(21,'userauth','0002_alter_user_id','2022-07-27 14:07:25.656444'),(22,'information','0002_auto_20220727_1413','2022-07-27 14:13:56.519478'),(23,'articles','0001_initial','2022-07-30 12:44:52.641583'),(24,'articles','0002_alter_articles_options','2022-07-30 13:43:22.155589'),(25,'articles','0003_alter_articles_created','2022-07-30 13:44:04.032718'),(26,'information','0003_auto_20220730_1345','2022-07-30 13:45:04.513340'),(27,'userauth','0003_alter_user_created','2022-07-30 13:45:05.796145'),(28,'information','0004_alter_information_options','2022-07-30 13:46:54.857157');
+INSERT INTO `django_migrations` VALUES (1,'sessions','0001_initial','2022-07-27 13:42:02.377186'),(2,'contenttypes','0001_initial','2022-07-27 13:50:35.610564'),(3,'contenttypes','0002_remove_content_type_name','2022-07-27 13:50:37.116373'),(4,'auth','0001_initial','2022-07-27 13:50:43.354974'),(5,'auth','0002_alter_permission_name_max_length','2022-07-27 13:50:44.595820'),(6,'auth','0003_alter_user_email_max_length','2022-07-27 13:50:44.749991'),(7,'auth','0004_alter_user_username_opts','2022-07-27 13:50:44.900544'),(8,'auth','0005_alter_user_last_login_null','2022-07-27 13:50:45.008852'),(9,'auth','0006_require_contenttypes_0002','2022-07-27 13:50:45.103614'),(10,'auth','0007_alter_validators_add_error_messages','2022-07-27 13:50:45.191263'),(11,'auth','0008_alter_user_username_max_length','2022-07-27 13:50:45.326282'),(12,'auth','0009_alter_user_last_name_max_length','2022-07-27 13:50:45.409848'),(13,'auth','0010_alter_group_name_max_length','2022-07-27 13:50:45.608998'),(14,'auth','0011_update_proxy_permissions','2022-07-27 13:50:45.686454'),(15,'auth','0012_alter_user_first_name_max_length','2022-07-27 13:50:45.837113'),(16,'userauth','0001_initial','2022-07-27 13:50:53.028856'),(17,'admin','0001_initial','2022-07-27 13:50:56.248212'),(18,'admin','0002_logentry_remove_auto_add','2022-07-27 13:50:56.389073'),(19,'admin','0003_logentry_add_action_flag_choices','2022-07-27 13:50:56.544910'),(20,'information','0001_initial','2022-07-27 14:07:18.409444'),(21,'userauth','0002_alter_user_id','2022-07-27 14:07:25.656444'),(22,'information','0002_auto_20220727_1413','2022-07-27 14:13:56.519478'),(23,'articles','0001_initial','2022-07-30 12:44:52.641583'),(24,'articles','0002_alter_articles_options','2022-07-30 13:43:22.155589'),(25,'articles','0003_alter_articles_created','2022-07-30 13:44:04.032718'),(26,'information','0003_auto_20220730_1345','2022-07-30 13:45:04.513340'),(27,'userauth','0003_alter_user_created','2022-07-30 13:45:05.796145'),(28,'information','0004_alter_information_options','2022-07-30 13:46:54.857157'),(29,'images','0001_initial','2022-07-30 14:11:04.080431'),(30,'events','0001_initial','2022-07-30 14:38:42.756301'),(31,'images','0002_auto_20220730_1438','2022-07-30 14:38:44.498984'),(32,'events','0002_alter_events_options','2022-07-30 14:41:33.512710');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,6 +235,66 @@ LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
 INSERT INTO `django_session` VALUES ('m03r7nz5zyf8yuprboi501h9gkuh81p6','.eJxVjMsOwiAQRf-FtSE8ZBhcuu83kKEMUjU0Ke3K-O_apAvd3nPOfYlI21rj1nmJUxYXocXpd0s0PrjtIN-p3WY5zm1dpiR3RR60y2HO_Lwe7t9BpV6_dbGABkGjUpwMJQwezwUZCQAQmTk7pRWRAQ_ZQCmOSrDknUeywYr3B82yN2c:1oGhTo:4Ec67aSZLG8KVG70WUIEL0ajjR5XqJnMw40FLK01Rc0','2022-08-10 13:53:40.972291');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `events_events`
+--
+
+DROP TABLE IF EXISTS `events_events`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `events_events` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `body` longtext NOT NULL,
+  `short` longtext,
+  `in_calendar` tinyint(1) NOT NULL,
+  `date_of` datetime(6) DEFAULT NULL,
+  `place` varchar(255) DEFAULT NULL,
+  `created` datetime(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `events_events`
+--
+
+LOCK TABLES `events_events` WRITE;
+/*!40000 ALTER TABLE `events_events` DISABLE KEYS */;
+INSERT INTO `events_events` VALUES (1,'Lorem ipsum.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus augue, facilisis viverra odio ac, tincidunt euismod dolor. Suspendisse at faucibus diam. Nulla ac facilisis metus, a mattis mauris. Integer gravida dignissim enim nec congue. Nam quam nisi, blandit ut finibus quis, ultrices quis magna. Quisque sed facilisis sapien. Integer mattis feugiat ligula, ut aliquam ante tempus at. Nam ultrices egestas nisl, sit amet vehicula odio feugiat et. Suspendisse laoreet metus eget mattis ultricies. Mauris bibendum faucibus mattis. Nullam a felis nisi. Sed lacinia sagittis convallis. Mauris dapibus est sed massa malesuada, ac scelerisque erat pellentesque. Fusce malesuada at sapien sit amet gravida.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus augue, facilisis viverra odio ac, tincidunt euismod dolor. Suspendisse at faucibus diam. Nulla ac facilisis metus, a mattis mauris. Integer gravida dignissim enim nec congue.',1,'2022-09-16 14:49:09.000000','Rajecka Lesna','2022-07-30 14:50:24.617738'),(2,'Curabitur non vehicula odio, nec molestie lacus.','Sed id suscipit ligula. Nam at lacus luctus, semper nulla quis, faucibus ex. Proin aliquet nunc eu dolor condimentum, nec dapibus ligula ultrices. Pellentesque imperdiet urna et neque fermentum rhoncus. Fusce dictum eleifend mattis. In non congue dolor. Nam a tellus sed purus malesuada cursus. Donec ipsum justo, vehicula quis sapien eget, condimentum posuere risus.','Sed id suscipit ligula. Nam at lacus luctus, semper nulla quis, faucibus ex. Proin aliquet nunc eu dolor condimentum, nec dapibus ligula ultrices.',0,NULL,NULL,'2022-07-30 15:19:50.970313');
+/*!40000 ALTER TABLE `events_events` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `images_images`
+--
+
+DROP TABLE IF EXISTS `images_images`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `images_images` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `image` varchar(100) NOT NULL,
+  `alt` varchar(255) NOT NULL,
+  `description` longtext,
+  `created` datetime(6) NOT NULL,
+  `event_id` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `images_images_event_id_8f5766b3_fk_events_events_id` (`event_id`),
+  CONSTRAINT `images_images_event_id_8f5766b3_fk_events_events_id` FOREIGN KEY (`event_id`) REFERENCES `events_events` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `images_images`
+--
+
+LOCK TABLES `images_images` WRITE;
+/*!40000 ALTER TABLE `images_images` DISABLE KEYS */;
+INSERT INTO `images_images` VALUES (1,'uploaded_images/placeholder-3.png','placeholder','','2022-07-30 14:20:40.551301',NULL),(2,'uploaded_images/placeholder-1.jpeg','placeholder','This is some placeholder.','2022-07-30 15:20:01.162557',2),(3,'uploaded_images/male-placeholder-image.jpeg','placeholder-user','This is placeholder image for male users.','2022-07-30 14:21:45.090900',NULL),(4,'uploaded_images/placeholder-3_hvtNEy8.png','Event image','','2022-07-30 14:50:24.619124',1),(5,'uploaded_images/male-placeholder-image_G6XdqYo.jpeg','Event image','This is event image for person in Rajecka Lesna','2022-07-30 14:50:24.645940',1);
+/*!40000 ALTER TABLE `images_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -363,4 +423,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-30 15:52:06
+-- Dump completed on 2022-07-30 17:28:48

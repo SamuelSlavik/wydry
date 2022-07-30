@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'userauth',
     'information',
     'articles',
+    'images',
+    'events',
 
     'rest_framework',
     'corsheaders',
