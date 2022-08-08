@@ -28,6 +28,10 @@ SECRET_KEY = 'django-insecure-agkz%-7x1*ic=k6=tl3wf@wukx=t4g)pb++ge3&8e^t5asbat3
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
 
 
 # Application definition
@@ -59,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'api.urls'
@@ -90,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wydry',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Root123!',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
