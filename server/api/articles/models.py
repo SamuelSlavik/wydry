@@ -10,7 +10,6 @@ class Paragraph(models.Model):
 class Articles(models.Model):
     id = models.BigAutoField(primary_key=True)
     headline = models.CharField(max_length=255)
-    body = None
     short = models.TextField(null=True, blank=True)
     author = models.CharField(max_length=120, null=True, blank=True)
     created = models.DateTimeField(auto_now=True)
