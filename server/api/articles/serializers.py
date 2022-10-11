@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Articles
+from .models import Articles, Paragraph
 
 
 class ArticleSerializer(serializers.ModelSerializer):
@@ -27,3 +27,7 @@ class ArticleSerializer(serializers.ModelSerializer):
     @staticmethod
     def get_endpoint(obj):
         return f'api/articles/{obj.id}/'
+
+    @staticmethod
+    def get_body(obj):
+        return Paragraph.objects.filter(article=obj.id)
