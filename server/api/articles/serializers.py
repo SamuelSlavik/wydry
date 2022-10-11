@@ -6,6 +6,7 @@ from .models import Articles, Paragraph
 class ArticleSerializer(serializers.ModelSerializer):
     thumbnail_path = serializers.SerializerMethodField()
     endpoint = serializers.SerializerMethodField()
+    body = serializers.SerializerMethodField()
 
     class Meta:
         model = Articles
