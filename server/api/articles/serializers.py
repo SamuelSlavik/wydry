@@ -22,7 +22,7 @@ class ArticleSerializer(serializers.ModelSerializer):
 
     @staticmethod
     def get_thumbnail_path(obj):
-        return obj.thumbnail.path
+        return obj.thumbnail.url
 
     @staticmethod
     def get_endpoint(obj):

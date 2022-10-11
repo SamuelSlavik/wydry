@@ -29,7 +29,7 @@ class ImageSerializer(serializers.ModelSerializer):
 
     @staticmethod
     def get_src(obj):
-        return obj.image.path
+        return obj.image.url
 
     @staticmethod
     def get_endpoint(obj):

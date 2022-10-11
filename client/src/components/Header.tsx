@@ -1,12 +1,10 @@
 import React from "react";
 
-export interface HeaderProps {
-  text: string
-}
+import {HeaderProps} from "../types/interfaces";
 
 function Header({text}: HeaderProps): JSX.Element {
   return (
-    <div className={"header"}>
+    <div data-aos={"zoom-in"} data-aos-offset={"200"} className={"header"}>
       <h2>{text}</h2>
     </div>
   )

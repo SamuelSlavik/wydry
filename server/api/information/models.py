@@ -9,6 +9,7 @@ class Information(models.Model):
     created = models.DateTimeField(auto_now=True)
     due_date = models.DateTimeField(blank=True, null=True)
 
+
     class Meta:
         ordering = ['-created']
 

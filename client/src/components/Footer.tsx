@@ -7,16 +7,18 @@ function Footer(): JSX.Element {
   return (
     <div className={"footer"}>
       <div className={"footer-info"}>
-        <h2>Čierne Wydry z Trojmezí</h2>
+        <h2>OZ Čierne Wydry z Trojmezí</h2>
         <div className={"footer-info__content"}>
           <div className={"footer-info__column"}>
-            <p>........</p>
-            <p>........</p>
-            <p>........</p>
+            <p>riaditel@rrakysuce.sk</p>
+            <br/>
+            <p>Čierne 556</p>
+            <p>023 12 Čierne</p>
+            <p>Slovensko</p>
           </div>
           <div className={"footer-info__column"}>
-            <p>........</p>
-            <p>........</p>
+            <p>GDPR</p>
+            <p>Stanovy</p>
             <p>........</p>
           </div>
         </div>
