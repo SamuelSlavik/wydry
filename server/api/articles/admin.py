@@ -14,4 +14,4 @@ class ArticlesAdmin(admin.ModelAdmin):
         model = Articles
 
 
-admin.site.register(ArticlesAdmin)
+admin.site.register(Articles, ArticlesAdmin)
