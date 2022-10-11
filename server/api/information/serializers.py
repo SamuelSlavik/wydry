@@ -3,6 +3,15 @@ from rest_framework import serializers
 from .models import Information, Paragraph
 
 
+class ParagraphSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Paragraph
+        fields = [
+            'text',
+            'article',
+        ]
+
+
 class InformationSerializer(serializers.ModelSerializer):
     short = serializers.SerializerMethodField()
     endpoint = serializers.SerializerMethodField()
@@ -36,4 +45,4 @@ class InformationSerializer(serializers.ModelSerializer):
 
     @staticmethod
     def get_body(obj):
-        return Paragraph.objects.filter(information=obj.id)
+        return ParagraphSerializer(Paragraph.objects.filter(information=obj.id), many=True).data
