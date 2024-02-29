@@ -7,19 +7,10 @@ Web app for the **Čierne Wydry z Trojmezí**
 # License
 This web app is shared under **GNU general public license**.
 
-# Build:
-Without. 
-
 # Stack
 **Frontend:** Typescript, ReactJS, Scss
 
-**Backend:** Django, ...
-
-**Database:** ...
-
-**Other tools:** ...
-
-# Sources
+**Backend:** Django
 
 
 # Authors
